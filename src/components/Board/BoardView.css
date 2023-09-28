@@ -1,0 +1,49 @@
+/* BoardView.css */
+
+/* Game Board */
+.game-board {
+  background-color: rgb(255, 176, 0);
+  padding: 2%;
+}
+
+/* Game Board Row */
+.game-board__row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.game-board__row:first-child {
+  border-top: 1px solid rgb(151, 151, 151);
+}
+
+/* Game Board Cell */
+.game-board__cell {
+  flex-grow: 1;
+  border-right: 1px solid rgb(151, 151, 151);
+}
+
+/* Game Board Cell Hit */
+.game-board__cell--hit::before {
+  background: url(../../assets/Hit.png) no-repeat center;
+  background-size: 106%;
+}
+
+/* Game Board Cell Miss */
+.game-board__cell--miss::before {
+  background: url(../../assets/Miss.png) no-repeat center;
+  background-size: 106%;
+}
+
+/* Game Board Cell Before */
+.game-board__cell::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  background-color: white;
+}
+
+/* Game Board Cell First Child */
+.game-board__cell:first-child {
+  border-left: 1px solid rgb(151, 151, 151);
+}
